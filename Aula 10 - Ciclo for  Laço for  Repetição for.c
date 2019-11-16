@@ -12,32 +12,29 @@ int main (int argc, char *argv[])
   for (contador=1;contador<=10 ;contador++ ) //de 1 a 10 10x
   {
     printf("TESTE %i\n", contador);
-    aux= aux++;
   };
-          printf("\n\nFIM TESTE: %i\n Rodou %i vezes\n\n", contador, aux);
+          printf("\n\nFIM TESTE: %i\n\n", contador);
 
   for (contador=0;contador<=10 ;contador++ ) //de 0 a 10 11x
   {
     printf("TESTE %i\n", contador);
-    aux= aux++;
   };
 
-          printf("\n\nFIM TESTE: %i\n Rodou %i vezes\n\n", contador, aux);
+          printf("\n\nFIM TESTE: %i\n\n", contador);
 
   for (contador=1;contador<10 ;contador++ ) //de 1 a 9 9x
   {
     printf("TESTE %i\n", contador);
-    aux= aux++;
   };
 
-          printf("\n\nFIM TESTE: %i\n Rodou %i vezes\n\n", contador, aux);
+          printf("\n\nFIM TESTE: %i\n\n", contador);
 
   for (contador=0;contador<10 ;contador++ ) //de 0 a 9 10x
   {
     printf("TESTE %i\n", contador);
     aux= aux++;
   };
-          printf("\n\nFIM TESTE: %i\n Rodou %i vezes\n\n", contador, aux);
+          printf("\n\nFIM TESTE: %i\n\n", contador);
 
 system("PAUSE");
 return 0;
