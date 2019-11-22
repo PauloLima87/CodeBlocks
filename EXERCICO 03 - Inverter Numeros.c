@@ -9,20 +9,34 @@
 int main (int argc, char *argv[])
 {
   setlocale(LC_ALL, "Portuguese"); //aceitar caracteres especiais e pontuação em PT-BR
-  int num1, num2, res;
-  printf("Digite o primeiro valor: ");
-  scanf("%i", &num1);
-  printf("Digite o segundo valor: ");
-  scanf("%i", &num2);
-  res = num1 % num2;
+  int numero, invertido;
+  printf("Qual Número deseja inverter? \n\n");
+  scanf("%i", &numero);
+  if (numero>=0){
+      do
+          {
+            invertido = numero%10;
+            printf("%i", invertido);
+            numero = numero/10;
 
-  if (res==0)
-    printf("O Numero %i É divisível por %i", num1, num2);
-  else
-    printf("O Numero %i NÃO É divisível por %i", num1, num2);
+          }while (numero!=0);
 
-  printf("\nNumero 1: %i \nNumero 2: %i\n\n", num1, num2);
+      printf("\n\n");
+  }else{
+    numero*=-1;
 
+    printf("-");
+    do
+          {
+            invertido = numero%10;
+            printf("%i", invertido);
+            numero = numero/10;
+
+          }while (numero!=0);
+
+    printf("\n\n");
+
+  }
   system("PAUSE");
 return 0;
 }
