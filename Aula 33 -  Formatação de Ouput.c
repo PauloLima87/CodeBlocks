@@ -3,41 +3,38 @@
 #include <conio.h>
 #include <locale.h>
 
-//declaração de variavel global
-//ela se comporta como static
-int gVariavelGlobal =2;//G minusculo no inicio por boas praticas deve existir em variaveis globais
 
 int main (int argc, char *argv[])
 {
   setlocale(LC_ALL, "Portuguese"); //aceitar caracteres especiais e pontuação em PT-BR
-  void teste(void);
 
-  teste();
-  teste();
-  teste();
+  int intVar = 9999999;
+  int intVar2 = 10;
+  double doubleVar = 100.1293456789;
 
-  printf("Variavel Global Chamada pelo MAIN : %i\n", gVariavelGlobal);
 
-return 0;
-}
-void teste(void)
-{
-  //variavel nao sofrerá alterações com multiplas chamadas, sendo sempre zerada com novas chamadas
-  int variavelLocalAutomatica = 4;
-  variavelLocalAutomatica *= variavelLocalAutomatica;
 
-  //Váriavel NÂO VAI ZERAR, sofrendo alterações a cada chamada,
-  //onde seu valor sera o ultimo estabelecido, podendo ser incrementado
-  //programa não recria ela a cada vez que é chamada
-  static int variavelLocalEstatica = 4;
-  variavelLocalEstatica *= variavelLocalEstatica;
+  //Tipos de saída pra inteiras
+  printf("Variável inteira(%%d) = %10d\n", intVar); //vem de digito numero antes significa alinhamento de 10 espaços
+  printf("Variável inteira(%%i) = %i\n", intVar); //variavel tipo inteira
+  printf("Variável inteira(%%x) = %x\n", intVar); //base 16 hexadecimal
+  printf("Variável inteira(%%o) = %o\n", intVar); //base 8 octal
 
-  //GLOBAL SE COMPORTA COMO STATIC
-  gVariavelGlobal*=2;
+  //Tipos de saída pra inteiras
+  printf("\n");
+  printf("Variável inteira(%%d) = %d\n", intVar2); //vem de digito
+  printf("Variável inteira(%%i) = %i\n", intVar2); //variavel tipo inteira
+  printf("Variável inteira(%%x) = %x\n", intVar2); //base 16 hexadecimal
+  printf("Variável inteira(%%o) = %o\n", intVar2); //base 8 octal
 
-  printf("Variavel Automática: %i\n", variavelLocalAutomatica);
-  printf("Variavel Estática: %i\n", variavelLocalEstatica);
+  //Tipos de Saída para Double e Float
+  printf("\n");
+  printf("Variável Double(%%f) = %f\n", doubleVar); //maxima precisao arredondando depois das 6 casa depois da virgula
+  printf("Variável Double(%%e) = %e\n", doubleVar); //Apresentação em notação científica
+  printf("Variável Double(%%g) = %g\n", doubleVar); //perde a precisão (3 casas depois da virgula), porem nao arredonda o numero
+  printf("Variável Double(%%a) = %a\n", doubleVar); //Apresentação em notação científica utilizando virgulas
+  printf("Variável Double(%%f) = %.2f\n", doubleVar); //Apresentação formatada para 2 casas depois da virgula, ele arredonda automaticamente
 
-  printf("Variavel Global Chamada pela FUNÇÂO : %i\n", gVariavelGlobal);
 
+  return 0;
 }
