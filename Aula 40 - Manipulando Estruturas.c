@@ -13,15 +13,23 @@ int main (int argc, char *argv[])
     int horas;
     int minutos;
     int segundos;
+    double teste;
+    char letra;
   };
 
   struct horario agora; //declaração de um estrutura de tipo HORARIO e nome AGORA. Antes de declarar é preciso definir.
+  struct horario depois;
 
   agora.horas = 15; //acessar o campo HOAS dentro da estrutura AGORA definida com o tipo HORARIO
   agora.minutos = 17;
   agora.segundos = 30;
 
-  printf("%i:%i:%i", agora.horas, agora.minutos, agora.segundos);
+  depois.horas = agora.horas + 10; //25
+  depois.minutos = agora.minutos; //17
+  depois.teste = 50.55/123;
+  depois.letra ='a';
+
+  printf("%i\n%i\n%f\n%c", depois.horas, depois.minutos, depois.teste, depois.letra);
 
   return 0;
 }
