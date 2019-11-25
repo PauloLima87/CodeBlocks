@@ -7,7 +7,9 @@
 de tipo estrutura sendo que essa estrutura deve armazenar um determinado horário no formato hh:mm:ss,
 peça que o usuário digite 5 horários diversos que deverão ser armazendos no argumento recebido.
 Crie uma segunda função que receberá este msmo vetor estrutura mas dessa vez a função deverá apenas ler
-os valores armazendos no vetor estrtura mostrando uma mensagem apropriada.*/
+os valores armazendos no vetor estrtura mostrando uma mensagem apropriada.
+
+RESPOSTA AULA 45*/
 
 struct horario
 {
