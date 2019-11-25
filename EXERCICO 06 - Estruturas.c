@@ -42,6 +42,7 @@ void armazenaHorario(struct horario vetor[])
 {
   for (int i =0;i<5 ;i++ )
       {
+        //HORARIO DIGITADO AQUI È NO FORMATO HH MM e SS linha a linha, SEPARADAMENTE
         printf("Hora %i: ",i+1);
         scanf("%i", &vetor[i].hora);
         printf("Minuto %i: ",i+1);
