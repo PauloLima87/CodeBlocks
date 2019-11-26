@@ -5,7 +5,7 @@
 
 int main (int argc, char *argv[])
 {
-  setlocale(LC_ALL, "Portuguese"); //aceitar caracteres especiais e pontuação em PT-BR
+  setlocale(LC_ALL, "Portuguese"); //aceitar caracteres especiais e pontuaï¿½ï¿½o em PT-BR
 
   char teste[] = {'B','R','A','S','I','L'};
 
