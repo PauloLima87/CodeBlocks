@@ -7,19 +7,11 @@
 int main (int argc, char *argv[])
 {
     setlocale(LC_ALL, "Portuguese"); //aceitar caracteres especiais e pontuação em PT-BR
-    int i;
-    for (i=1;i<=20 ;i++ )
-        {
-            if (i%3==0 && i%9==0)
-                {
-                    printf("%i é Divisivel por 3 e 9\n", i);
-                    break; //ao atender as condições para a execução;
-                }else{
-                    printf("%i Próximo número %i\n", i, i+1);
-                };
-        };
 
+    printf("TESTANDO GETCHAR E SYSTEM PAUSE");
 
-system("PAUSE");//desnecessário para o CODE BLOCKS
+getchar(); //desnecessário para o CODE BLOCKS.
+system("PAUSE"); //desnecessário para o CODE BLOCKS. Comando WIN
+
 return 0;
 }
