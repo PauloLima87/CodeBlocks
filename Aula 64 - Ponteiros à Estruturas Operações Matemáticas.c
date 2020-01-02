@@ -25,12 +25,25 @@ depois = &agora; //depois appnta para endereço de memoria da estrutura agora
 (*depois).min = 25;
 (*depois).seg = 13;
 
-//mareira 2 de acessar ponteiro
-depois->hora = 22;
+//maneira 2 de acessar ponteiro
+depois->hora = 01;
 depois->min = 22;
-depois->seg = 22;
+depois->seg = 50;
 
-printf("%i:%i:%i", agora.hora, agora.min, agora.seg);
+int somatorio = 100;
+
+struct horario antes;
+
+antes.hora = somatorio + depois->seg; //soma de valor de variavel + valor de ponteiro
+antes.min = agora.hora + depois->min; //soma de valor de variavel + valor de ponteiro
+antes.seg = depois->min + depois->seg; //soma de valor de variavel + valor de ponteiro
+
+printf("%i\n", antes.hora);
+printf("%i\n", antes.min);
+printf("%i\n", antes.seg);
+
+printf("%i:%i:%i\n", antes.hora, antes.min, antes.seg);
+printf("%i:%i:%i\n", agora.hora, agora.min, agora.seg);
 
 getchar(); //desnecessário para o CODE BLOCKS.
 return 0;
