@@ -18,7 +18,7 @@ struct horario{
 struct horario agora, *depois; //variavel do tipo estrutura horario de nome agora
 //um ponterio que aponta para estruturas de tipo horario denominado *depois
 
-depois = &agora; //depois appnta para endereço de memoria da estrutura agora
+depois = &agora; //depois aponta para endereço de memoria da estrutura agora
 
 //maneira 1 de acessar ponteiro
 (*depois).hora = 11;
@@ -26,7 +26,7 @@ depois = &agora; //depois appnta para endereço de memoria da estrutura agora
 (*depois).seg = 13;
 
 //mareira 2 de acessar ponteiro
-depois->hora = 22;
+depois->hora = 22; //nesse caso apesar de nao possuir o "*" ele passa o valor 22 e não a posição de memoria onde o 22 esta
 depois->min = 22;
 depois->seg = 22;
 
