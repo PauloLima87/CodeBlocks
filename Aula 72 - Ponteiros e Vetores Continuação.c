@@ -11,7 +11,7 @@ int main (int argc, char *argv[])
     /*int x =10;
     int *ponteiro = &x;*/
 
-    int vetor[3] ={1,2,3};
+    int vetor[3] ={1,5,7};
     int *ponteiro =vetor; //ponteiro vai apontar para um endereço de memoria nao precisando mostrar tamanho como no vetor
                         //por ser vetor nao preciso &vetor
 /*
@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
 */
 
    //mostrando que um vetor ocupa espaços sequenciais na memoria
-    /*ponteiro =&vetor[0];
+   /* ponteiro =&vetor[0];
     printf("%p\n", ponteiro);
 
     ponteiro =&vetor[1];
@@ -37,7 +37,10 @@ int main (int argc, char *argv[])
 */
 
     //alterando o valor do vetor
-    *(ponteiro + 1) =10; //o endereço de memoria do ponteiro + 1
+    printf("%i\n", vetor[1]);
+    *(ponteiro + 1) =10;//entre parenteses é especificado o endereço de memoria que sera acessado
+                        //ja o "*" mostra que daquele endereço eu quero acessar o VALOR, e esse valor sera alterado.
+                        //o endereço de memoria do ponteiro + 1
                         //(ou seja ele aponta pra 0 logo posição 0+1
                         //e a i pega o endereço de memoria da posição correspondente,
                         //e assim altera o valor ou seja o valor 2 passa a ser 10)
